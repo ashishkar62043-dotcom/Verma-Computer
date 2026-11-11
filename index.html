@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verma Computer & CSC Center | Raniganj, Gaya</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Rajdhani / Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Hind', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            cscBlue: '#0b409c',
+            cscNavy: '#07245b',
+            cscOrange: '#f97316',
+            cscGreen: '#16a34a',
+            cscRed: '#dc2626',
+            saffron: '#ff9933',
+            deepSaffron: '#e67300',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0b409c;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #07245b;
+    }
+
+    /* Print Specific Styling */
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #printReceiptModal, #printReceiptModal * {
+        visibility: visible;
+      }
+      #printReceiptModal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: white;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+  <!-- TOP ANNOUNCEMENT & CONTACT BAR -->
+  <div class="bg-gradient-to-r from-orange-600 via-blue-900 to-green-700 text-white text-xs sm:text-sm py-2 px-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center space-x-3">
+        <span class="bg-yellow-400 text-slate-900 font-bold px-2 py-0.5 rounded text-xs animate-pulse">
+          <i class="fa-solid fa-bell mr-1"></i> Live Portal
+        </span>
+        <span class="hidden sm:inline font-medium">रानीगंज, गया का सबसे भरोसेमंद जन सेवा एवं ऑनलाइन कैफे</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs sm:text-sm">
+        <a href="tel:6201408435" class="hover:text-yellow-300 flex items-center gap-1 font-semibold">
+          <i class="fa-solid fa-phone"></i> 6201408435
+        </a>
+        <span class="text-slate-300">|</span>
+        <a href="mailto:computerverma36@gmail.com" class="hover:text-yellow-300 flex items-center gap-1 font-medium">
+          <i class="fa-solid fa-envelope"></i> computerverma36@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER / NAVBAR -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+      
+      <!-- Brand & Owner Details -->
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-700 to-cyan-500 text-white flex items-center justify-center font-extrabold text-2xl shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform">
+          VC
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 group-hover:text-cscBlue transition-colors">
+              VERMA COMPUTER
+            </h1>
+            <span class="bg-red-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">CSC</span>
+          </div>
+          <p class="text-xs text-slate-500 font-medium">आपकी सुविधा, हमारा प्रयास | प्रो० चितरंजन वर्मा</p>
+        </div>
+      </a>
+
+      <!-- Quick Nav Links -->
+      <nav class="hidden md:flex items-center space-x-6 font-medium text-slate-700 text-sm">
+        <a href="#services" class="hover:text-cscBlue transition-colors">सेवाएं (Services)</a>
+        <a href="#applySection" class="hover:text-cscBlue transition-colors font-semibold text-cscBlue">
+          <i class="fa-solid fa-file-arrow-up text-orange-500 mr-1"></i> दस्तावेज भेजें
+        </a>
+        <a href="#trackSection" class="hover:text-cscBlue transition-colors">
+          <i class="fa-solid fa-magnifying-glass mr-1 text-blue-600"></i> स्टेटस ट्रैक करें
+        </a>
+        <a href="#contact" class="hover:text-cscBlue transition-colors">संपर्क</a>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="flex items-center space-x-2 sm:space-x-3">
+        <a href="https://wa.me/916201408435?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20Verma%20Computer%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%91%E0%A4%A8%E0%A4%B2%E0%A4%BE%E0%A4%87%E0%A4%A8%20%E0%A4%AB%E0%A5%89%E0%A4%B0%E0%A5%8D%E0%A4%AE%20%2F%20%E0%A4%A6%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%B5%E0%A5%87%E0%A4%9C%E0%A4%BC%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%82%E0%A4%A7%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%8F%E0%A5%A4" 
+           target="_blank"
+           class="inline-flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-green-600 hover:bg-green-700 text-white transition-all shadow shadow-green-600/30">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span class="hidden sm:inline">WhatsApp</span>
+        </a>
+        <a href="#applySection" class="inline-flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-cscBlue hover:bg-cscNavy text-white transition-all shadow-md shadow-blue-700/30">
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <span>ऑनलाइन कराएं</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO SECTION WITH BANNER BRANDING -->
+  <section class="relative bg-gradient-to-b from-blue-950 via-slate-900 to-slate-900 text-white py-12 lg:py-16 overflow-hidden">
+    <!-- Decorative background elements -->
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 -left-24 w-96 h-96 bg-orange-600/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Hero Left Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-900/80 border border-blue-700 text-yellow-300 text-xs sm:text-sm font-semibold tracking-wide">
+            <i class="fa-solid fa-location-dot text-red-400"></i>
+            रानीगंज, गया (बिहार) - 824210
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+            घर बैठे सभी सरकारी एवं प्राइवेट <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-amber-200">
+              फॉर्म भरवाएं व दस्तावेज भेजें
+            </span>
+          </h2>
+
+          <p class="text-slate-300 text-sm sm:text-base max-w-2xl leading-relaxed">
+            पैन कार्ड, वोटर कार्ड, ड्राइविंग लाइसेंस, सरकारी नौकरी फॉर्म, जाति-आय-निवास प्रमाण पत्र, 
+            और सभी CSC सेवाओं के लिए अब दुकान पर लाइन लगाने की ज़रूरत नहीं। 
+            <strong>अपने डॉक्यूमेंट्स यहाँ अपलोड करें या सीधा WhatsApp पर भेजें!</strong>
+          </p>
+
+          <!-- Quick Action Buttons -->
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="#applySection" class="px-5 py-3 rounded-xl bg-orange-600 hover:bg-orange-500 font-bold text-white shadow-lg shadow-orange-600/30 flex items-center gap-2 transform active:scale-95 transition-all text-sm sm:text-base">
+              <i class="fa-solid fa-paper-plane"></i>
+              डॉक्यूमेंट ऑनलाइन भेजें
+            </a>
+            <a href="#trackSection" class="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 font-semibold text-slate-200 flex items-center gap-2 transform active:scale-95 transition-all text-sm sm:text-base">
+              <i class="fa-solid fa-receipt text-cyan-400"></i>
+              स्टेटस चेक करें
+            </a>
+            <a href="tel:6201408435" class="px-4 py-3 rounded-xl bg-blue-700/40 hover:bg-blue-700 border border-blue-500 font-semibold text-white flex items-center gap-2 text-sm sm:text-base">
+              <i class="fa-solid fa-phone-volume text-green-400"></i>
+              कॉल करें
+            </a>
+          </div>
+
+          <!-- Key Highlights Badges -->
+          <div class="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 border-t border-slate-800">
+            <div class="flex items-center gap-2 text-xs text-slate-300">
+              <i class="fa-solid fa-circle-check text-green-400 text-sm"></i>
+              <span>100% सुरक्षित सेवा</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-300">
+              <i class="fa-solid fa-bolt text-yellow-400 text-sm"></i>
+              <span>त्वरित फॉर्म सबमिशन</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-300">
+              <i class="fa-solid fa-print text-cyan-400 text-sm"></i>
+              <span>डिजिटल रसीद तुरंत</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-300">
+              <i class="fa-brands fa-whatsapp text-green-400 text-sm"></i>
+              <span>WhatsApp अपडेट्स</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Card (Quick Info / Digital Shop Front) -->
+        <div class="lg:col-span-5">
+          <div class="bg-gradient-to-br from-slate-800/90 to-slate-900/90 border border-slate-700/80 rounded-2xl p-6 shadow-2xl backdrop-blur-md relative overflow-hidden">
+            <div class="absolute -right-8 -top-8 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl"></div>
+            
+            <div class="flex items-center justify-between pb-4 border-b border-slate-700 mb-4">
+              <div class="flex items-center gap-3">
+                <div class="p-3 bg-red-600/20 text-red-400 rounded-lg border border-red-500/30">
+                  <i class="fa-solid fa-desktop text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base">VERMA COMPUTER</h3>
+                  <p class="text-xs text-slate-400">Common Service Center (CSC)</p>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 text-xs rounded-full bg-green-500/20 text-green-300 border border-green-500/30 flex items-center gap-1.5 font-medium">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-ping"></span>
+                दुकान खुली है
+              </span>
+            </div>
+
+            <!-- Shop Info list -->
+            <div class="space-y-3 text-xs sm:text-sm text-slate-300">
+              <div class="flex items-start gap-3 bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/50">
+                <i class="fa-solid fa-user-tie text-amber-400 mt-1"></i>
+                <div>
+                  <span class="block text-slate-400 text-xs font-semibold">संचालक (Owner)</span>
+                  <span class="text-white font-medium">चितरंजन वर्मा (Chitranjan Verma)</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/50">
+                <i class="fa-solid fa-phone text-emerald-400 mt-1"></i>
+                <div>
+                  <span class="block text-slate-400 text-xs font-semibold">मोबाइल / व्हाट्सएप नंबर</span>
+                  <a href="tel:6201408435" class="text-white font-semibold hover:text-emerald-300">+91 6201408435</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/50">
+                <i class="fa-solid fa-location-dot text-rose-400 mt-1"></i>
+                <div>
+                  <span class="block text-slate-400 text-xs font-semibold">दुकान का पूरा पता</span>
+                  <span class="text-white font-medium">रानीगंज, गया, बिहार - 824210</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/50">
+                <i class="fa-solid fa-envelope text-blue-400 mt-1"></i>
+                <div>
+                  <span class="block text-slate-400 text-xs font-semibold">ईमेल आईडी</span>
+                  <span class="text-white font-medium">computerverma36@gmail.com</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-slate-700 flex items-center justify-between">
+              <span class="text-xs text-slate-400">दुकान समय: <strong>सुबह 8:00 - रात 8:30</strong></span>
+              <button onclick="scrollToApply('all')" class="text-xs bg-yellow-500 hover:bg-yellow-400 text-slate-950 font-bold px-3 py-1.5 rounded-md transition-all">
+                अभी अप्लाई करें &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK SERVICES STRIP (MATCHING BANNER) -->
+  <div class="bg-blue-900 border-y border-blue-800 text-white py-3 shadow-inner">
+    <div class="max-w-7xl mx-auto px-4 overflow-x-auto scrollbar-none flex items-center space-x-6 text-xs sm:text-sm font-medium whitespace-nowrap">
+      <span class="text-yellow-400 font-bold flex items-center gap-1.5">
+        <i class="fa-solid fa-star"></i> प्रमुख सेवाएं:
+      </span>
+      <span class="inline-flex items-center gap-1.5 bg-blue-800/80 px-2.5 py-1 rounded-md"><i class="fa-solid fa-id-card text-emerald-400"></i> आधार सेवा</span>
+      <span class="inline-flex items-center gap-1.5 bg-blue-800/80 px-2.5 py-1 rounded-md"><i class="fa-solid fa-credit-card text-rose-400"></i> नया पैन कार्ड</span>
+      <span class="inline-flex items-center gap-1.5 bg-blue-800/80 px-2.5 py-1 rounded-md"><i class="fa-solid fa-check-to-slot text-cyan-400"></i> वोटर कार्ड</span>
+      <span class="inline-flex items-center gap-1.5 bg-blue-800/80 px-2.5 py-1 rounded-md"><i class="fa-solid fa-car text-amber-400"></i> ड्राइविंग लाइसेंस</span>
+      <span class="inline-flex items-center gap-1.5 bg-blue-800/80 px-2.5 py-1 rounded-md"><i class="fa-solid fa-file-signature text-purple-400"></i> जाति, आय, निवास</span>
+      <span class="inline-flex items-center gap-1.5 bg-blue-800/80 px-2.5 py-1 rounded-md"><i class="fa-solid fa-users text-green-400"></i> राशन कार्ड</span>
+      <span class="inline-flex items-center gap-1.5 bg-blue-800/80 px-2.5 py-1 rounded-md"><i class="fa-solid fa-hand-holding-heart text-pink-400"></i> पेंशन आवेदन</span>
+      <span class="inline-flex items-center gap-1.5 bg-blue-800/80 px-2.5 py-1 rounded-md"><i class="fa-solid fa-train text-orange-400"></i> रेल/बस टिकट</span>
+      <span class="inline-flex items-center gap-1.5 bg-blue-800/80 px-2.5 py-1 rounded-md"><i class="fa-solid fa-print text-sky-400"></i> फोटो कॉपी व लैमिनेशन</span>
+    </div>
+  </div>
+
+  <!-- MAIN SERVICES CATALOG SECTION (BASED ON BANNER) -->
+  <section id="services" class="py-14 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-cscBlue font-bold uppercase tracking-wider text-xs sm:text-sm bg-blue-100 px-3 py-1 rounded-full border border-blue-200">
+          हमारी प्रमुख सेवाएं
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+          वर्मा कंप्यूटर पर उपलब्ध ऑनलाइन सेवाएं
+        </h2>
+        <p class="text-slate-600 text-sm mt-2">
+          नीचे दी गई किसी भी सेवा के लिए क्लिक करें और अपना दस्तावेज तुरंत जमा करें
+        </p>
+      </div>
+
+      <!-- 5 Major Columns Grid as seen on Banner -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+
+        <!-- Card 1: PAN Card -->
+        <div class="bg-white rounded-2xl shadow-md border-t-4 border-pink-600 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+          <div>
+            <div class="bg-pink-600 p-4 text-white text-center">
+              <h3 class="text-lg font-bold">पैन कार्ड</h3>
+              <p class="text-xs text-pink-100">आयकर विभाग (Income Tax)</p>
+            </div>
+            <div class="p-4">
+              <!-- Visual Mock of Pan -->
+              <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-2.5 mb-3 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded bg-slate-300 flex items-center justify-center text-slate-600 font-bold">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <div>
+                    <p class="text-[10px] text-slate-500 font-bold uppercase">PAN CARD</p>
+                    <p class="font-mono font-bold text-slate-800 text-[11px]">ABCDE1234F</p>
+                  </div>
+                </div>
+                <i class="fa-solid fa-qrcode text-xl text-slate-700"></i>
+              </div>
+
+              <ul class="space-y-2 text-xs text-slate-700">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> नया पैन कार्ड अप्लाई</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> पैन कार्ड में सुधार (Name, DOB)</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> खोया पैन कार्ड पुनः प्रिंट</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> आधार कार्ड से पैन लिंक</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <button onclick="selectServiceForApply('पैन कार्ड (नया / सुधार)')" class="w-full py-2 px-3 bg-pink-50 hover:bg-pink-600 text-pink-700 hover:text-white rounded-lg font-bold text-xs border border-pink-300 hover:border-pink-600 transition-colors flex items-center justify-center gap-1.5">
+              <span>पैन कार्ड बनवाएं</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: Voter Card -->
+        <div class="bg-white rounded-2xl shadow-md border-t-4 border-emerald-600 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+          <div>
+            <div class="bg-emerald-600 p-4 text-white text-center">
+              <h3 class="text-lg font-bold">वोटर कार्ड</h3>
+              <p class="text-xs text-emerald-100">भारत निर्वाचन आयोग</p>
+            </div>
+            <div class="p-4">
+              <!-- Mock Voter Card -->
+              <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-2.5 mb-3 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded bg-emerald-200 flex items-center justify-center text-emerald-700 font-bold">
+                    <i class="fa-solid fa-address-card"></i>
+                  </div>
+                  <div>
+                    <p class="text-[10px] text-slate-500 font-bold uppercase">ELECTION CARD</p>
+                    <p class="font-mono font-bold text-slate-800 text-[11px]">EPIC-XYZ987</p>
+                  </div>
+                </div>
+                <i class="fa-solid fa-barcode text-xl text-slate-700"></i>
+              </div>
+
+              <ul class="space-y-2 text-xs text-slate-700">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> नया वोटर कार्ड आवेदन</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> वोटर कार्ड में नाम जोड़ना</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> फोटो / पता / उम्र सुधार</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> डिजिटल e-EPIC डाउनलोड</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <button onclick="selectServiceForApply('वोटर कार्ड (नया / सुधार)')" class="w-full py-2 px-3 bg-emerald-50 hover:bg-emerald-600 text-emerald-700 hover:text-white rounded-lg font-bold text-xs border border-emerald-300 hover:border-emerald-600 transition-colors flex items-center justify-center gap-1.5">
+              <span>वोटर कार्ड बनवाएं</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Driving Licence -->
+        <div class="bg-white rounded-2xl shadow-md border-t-4 border-amber-600 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+          <div>
+            <div class="bg-amber-600 p-4 text-white text-center">
+              <h3 class="text-lg font-bold">ड्राइविंग लाइसेंस</h3>
+              <p class="text-xs text-amber-100">परिवहन सेवा (Sarathi)</p>
+            </div>
+            <div class="p-4">
+              <!-- Mock DL -->
+              <div class="bg-amber-50 border border-amber-200 rounded-lg p-2.5 mb-3 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded bg-amber-200 flex items-center justify-center text-amber-800 font-bold">
+                    <i class="fa-solid fa-car-side"></i>
+                  </div>
+                  <div>
+                    <p class="text-[10px] text-slate-500 font-bold uppercase">DRIVING LICENCE</p>
+                    <p class="font-mono font-bold text-slate-800 text-[11px]">BR-02-2024-DL</p>
+                  </div>
+                </div>
+                <i class="fa-solid fa-id-badge text-xl text-amber-700"></i>
+              </div>
+
+              <ul class="space-y-2 text-xs text-slate-700">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> लर्नर लाइसेंस (LL) आवेदन</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> स्थायी लाइसेंस (DL) आवेदन</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> डुप्लीकेट व रिन्यूअल लाइसेंस</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> पता / नाम में संशोधन</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <button onclick="selectServiceForApply('ड्राइविंग लाइसेंस (लर्नर / परमानेंट)')" class="w-full py-2 px-3 bg-amber-50 hover:bg-amber-600 text-amber-800 hover:text-white rounded-lg font-bold text-xs border border-amber-300 hover:border-amber-600 transition-colors flex items-center justify-center gap-1.5">
+              <span>लाइसेंस अप्लाई करें</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4: Sarkari Naukri & Admit Card -->
+        <div class="bg-white rounded-2xl shadow-md border-t-4 border-blue-600 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+          <div>
+            <div class="bg-blue-600 p-4 text-white text-center">
+              <h3 class="text-lg font-bold">सरकारी नौकरी फॉर्म</h3>
+              <p class="text-xs text-blue-100">SSC, Railway, BPSC, Police</p>
+            </div>
+            <div class="p-4">
+              <!-- Mock Job Form -->
+              <div class="bg-blue-50 border border-blue-200 rounded-lg p-2.5 mb-3 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded bg-blue-200 flex items-center justify-center text-blue-800 font-bold">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                  </div>
+                  <div>
+                    <p class="text-[10px] text-slate-500 font-bold uppercase">ONLINE JOBS</p>
+                    <p class="font-bold text-slate-800 text-[11px]">All Govt Vacancy</p>
+                  </div>
+                </div>
+                <i class="fa-solid fa-pen-to-square text-xl text-blue-700"></i>
+              </div>
+
+              <ul class="space-y-2 text-xs text-slate-700">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> सभी सरकारी नौकरी फॉर्म भरना</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> एडमिट कार्ड (Admit Card) प्रिंट</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> रिजल्ट प्रिंट व स्कोर कार्ड</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> आवेदन में सुधार (Correction)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <button onclick="selectServiceForApply('सरकारी नौकरी फॉर्म / एडमिट कार्ड')" class="w-full py-2 px-3 bg-blue-50 hover:bg-blue-600 text-blue-700 hover:text-white rounded-lg font-bold text-xs border border-blue-300 hover:border-blue-600 transition-colors flex items-center justify-center gap-1.5">
+              <span>फॉर्म भरवाएं</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 5: CSC All Services -->
+        <div class="bg-white rounded-2xl shadow-md border-t-4 border-orange-500 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+          <div>
+            <div class="bg-orange-600 p-4 text-white text-center">
+              <h3 class="text-lg font-bold">CSC का सभी काम</h3>
+              <p class="text-xs text-orange-100">कॉमन सर्विस सेंटर</p>
+            </div>
+            <div class="p-4">
+              <!-- Mock CSC -->
+              <div class="bg-orange-50 border border-orange-200 rounded-lg p-2.5 mb-3 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded bg-orange-200 flex items-center justify-center text-orange-800 font-bold">
+                    <i class="fa-solid fa-building-columns"></i>
+                  </div>
+                  <div>
+                    <p class="text-[10px] text-slate-500 font-bold uppercase">CSC CENTER</p>
+                    <p class="font-bold text-slate-800 text-[11px]">E-Governance</p>
+                  </div>
+                </div>
+                <span class="text-xs font-bold text-orange-600 px-1.5 py-0.5 bg-white rounded border">CSC</span>
+              </div>
+
+              <ul class="space-y-2 text-xs text-slate-700">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> आधार संबंधित सेवाएं</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> पेंशन आवेदन (वृद्धा, विधवा, दिव्यांग)</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> जाति, आय, निवास प्रमाण पत्र</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> राशन कार्ड, जमीन रसीद व अन्य</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <button onclick="selectServiceForApply('CSC एवं सरकारी प्रमाण पत्र (जाति/आय/निवास/पेंशन)')" class="w-full py-2 px-3 bg-orange-50 hover:bg-orange-600 text-orange-700 hover:text-white rounded-lg font-bold text-xs border border-orange-300 hover:border-orange-600 transition-colors flex items-center justify-center gap-1.5">
+              <span>CSC सेवा चुनें</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Additional Popular Services Grid (Icons from banner bottom) -->
+      <div class="mt-12 bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+        <h4 class="text-center font-bold text-slate-800 mb-6 text-base sm:text-lg flex items-center justify-center gap-2">
+          <i class="fa-solid fa-shapes text-orange-500"></i>
+          अन्य सभी ऑनलाइन व कंप्यूटर सेवाएं
+        </h4>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 text-center">
+          
+          <div onclick="selectServiceForApply('आधार कार्ड संबंधित कार्य')" class="p-3 bg-slate-50 hover:bg-blue-50 rounded-xl border border-slate-200 hover:border-blue-400 transition-all cursor-pointer group">
+            <div class="w-10 h-10 mx-auto rounded-full bg-red-100 text-red-600 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-fingerprint text-lg"></i>
+            </div>
+            <p class="font-bold text-xs text-slate-800">आधार कार्ड</p>
+            <p class="text-[10px] text-slate-500">प्रिंट व संशोधन</p>
+          </div>
+
+          <div onclick="selectServiceForApply('राशन कार्ड आवेदन / संशोधन')" class="p-3 bg-slate-50 hover:bg-blue-50 rounded-xl border border-slate-200 hover:border-blue-400 transition-all cursor-pointer group">
+            <div class="w-10 h-10 mx-auto rounded-full bg-amber-100 text-amber-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-book text-lg"></i>
+            </div>
+            <p class="font-bold text-xs text-slate-800">राशन कार्ड</p>
+            <p class="text-[10px] text-slate-500">नया नाम व कार्ड</p>
+          </div>
+
+          <div onclick="selectServiceForApply('जाति / आय / निवास प्रमाण पत्र')" class="p-3 bg-slate-50 hover:bg-blue-50 rounded-xl border border-slate-200 hover:border-blue-400 transition-all cursor-pointer group">
+            <div class="w-10 h-10 mx-auto rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-file-shield text-lg"></i>
+            </div>
+            <p class="font-bold text-xs text-slate-800">जाति, आय, निवास</p>
+            <p class="text-[10px] text-slate-500">Service Plus Bihar</p>
+          </div>
+
+          <div onclick="selectServiceForApply('पेंशन योजना (वृद्धा, विधवा, दिव्यांग)')" class="p-3 bg-slate-50 hover:bg-blue-50 rounded-xl border border-slate-200 hover:border-blue-400 transition-all cursor-pointer group">
+            <div class="w-10 h-10 mx-auto rounded-full bg-purple-100 text-purple-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-wheelchair text-lg"></i>
+            </div>
+            <p class="font-bold text-xs text-slate-800">पेंशन योजना</p>
+            <p class="text-[10px] text-slate-500">वृद्धा / विधवा / दिव्यांग</p>
+          </div>
+
+          <div onclick="selectServiceForApply('बिजली बिल व रिचार्ज (Mobile/DTH)')" class="p-3 bg-slate-50 hover:bg-blue-50 rounded-xl border border-slate-200 hover:border-blue-400 transition-all cursor-pointer group">
+            <div class="w-10 h-10 mx-auto rounded-full bg-yellow-100 text-yellow-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-lightbulb text-lg"></i>
+            </div>
+            <p class="font-bold text-xs text-slate-800">बिजली / रिचार्ज</p>
+            <p class="text-[10px] text-slate-500">बिल भुगतान व DTH</p>
+          </div>
+
+          <div onclick="selectServiceForApply('रेलवे व बस टिकट बुकिंग')" class="p-3 bg-slate-50 hover:bg-blue-50 rounded-xl border border-slate-200 hover:border-blue-400 transition-all cursor-pointer group">
+            <div class="w-10 h-10 mx-auto rounded-full bg-blue-100 text-blue-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-train text-lg"></i>
+            </div>
+            <p class="font-bold text-xs text-slate-800">रेल / बस टिकट</p>
+            <p class="text-[10px] text-slate-500">IRCTC कन्फर्म टिकट</p>
+          </div>
+
+          <div onclick="selectServiceForApply('जमीन रसीद / दाखिल खारिज / LPC')" class="p-3 bg-slate-50 hover:bg-blue-50 rounded-xl border border-slate-200 hover:border-blue-400 transition-all cursor-pointer group">
+            <div class="w-10 h-10 mx-auto rounded-full bg-teal-100 text-teal-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-map-location-dot text-lg"></i>
+            </div>
+            <p class="font-bold text-xs text-slate-800">जमीन रसीद व LPC</p>
+            <p class="text-[10px] text-slate-500">बिहार भूमि सेवा</p>
+          </div>
+
+          <div onclick="selectServiceForApply('फोटो कॉपी / लैमिनेशन / प्रिंट आउट')" class="p-3 bg-slate-50 hover:bg-blue-50 rounded-xl border border-slate-200 hover:border-blue-400 transition-all cursor-pointer group">
+            <div class="w-10 h-10 mx-auto rounded-full bg-slate-200 text-slate-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-print text-lg"></i>
+            </div>
+            <p class="font-bold text-xs text-slate-800">फोटो कॉपी / लैमिनेशन</p>
+            <p class="text-[10px] text-slate-500">कलर व ब्लैक/व्हाइट</p>
+          </div>
+
+          <div onclick="selectServiceForApply('दस्तावेज़ स्कैन व साइज रिड्यूस')" class="p-3 bg-slate-50 hover:bg-blue-50 rounded-xl border border-slate-200 hover:border-blue-400 transition-all cursor-pointer group">
+            <div class="w-10 h-10 mx-auto rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-scanner-image text-lg"></i>
+            </div>
+            <p class="font-bold text-xs text-slate-800">दस्तावेज़ स्कैनिंग</p>
+            <p class="text-[10px] text-slate-500">PDF व साइज सेट</p>
+          </div>
+
+          <div onclick="selectServiceForApply('पासपोर्ट साइज फोटो निर्माण')" class="p-3 bg-slate-50 hover:bg-blue-50 rounded-xl border border-slate-200 hover:border-blue-400 transition-all cursor-pointer group">
+            <div class="w-10 h-10 mx-auto rounded-full bg-rose-100 text-rose-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-image text-lg"></i>
+            </div>
+            <p class="font-bold text-xs text-slate-800">पासपोर्ट साइज फोटो</p>
+            <p class="text-[10px] text-slate-500">तुरंत 5 मिनट में तैयार</p>
+          </div>
+
+          <div onclick="selectServiceForApply('आयुष्मान भारत कार्ड (Golden Card)')" class="p-3 bg-slate-50 hover:bg-blue-50 rounded-xl border border-slate-200 hover:border-blue-400 transition-all cursor-pointer group">
+            <div class="w-10 h-10 mx-auto rounded-full bg-green-100 text-green-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-hospital-user text-lg"></i>
+            </div>
+            <p class="font-bold text-xs text-slate-800">आयुष्मान कार्ड</p>
+            <p class="text-[10px] text-slate-500">5 लाख फ्री इलाज</p>
+          </div>
+
+          <div onclick="selectServiceForApply('ई-श्रम कार्ड / लेबर कार्ड')" class="p-3 bg-slate-50 hover:bg-blue-50 rounded-xl border border-slate-200 hover:border-blue-400 transition-all cursor-pointer group">
+            <div class="w-10 h-10 mx-auto rounded-full bg-orange-100 text-orange-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-id-badge text-lg"></i>
+            </div>
+            <p class="font-bold text-xs text-slate-800">ई-श्रम / लेबर कार्ड</p>
+            <p class="text-[10px] text-slate-500">सरकारी सहायता योजनाएं</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAIN DOCUMENT SUBMISSION & APPLICATION FORM (HEART OF THE PORTAL) -->
+  <section id="applySection" class="py-14 bg-gradient-to-b from-slate-100 to-white relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-8">
+        <span class="bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-orange-200">
+          <i class="fa-solid fa-upload mr-1"></i> ऑनलाइन डॉक्यूमेंट जमा पोर्टल
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2">
+          ऑनलाइन फॉर्म भरवाएं और डॉक्यूमेंट भेजें
+        </h2>
+        <p class="text-slate-600 text-sm mt-1 max-w-xl mx-auto">
+          यहाँ अपनी जानकारी और फोटो/डॉक्यूमेंट अपलोड करें। फॉर्म भरते ही आपको टोकन नंबर मिलेगा और 
+          आप एक क्लिक में अपनी डिटेल व्हाट्सएप पर चितरंजन जी को भेज पाएंगे।
+        </p>
+      </div>
+
+      <!-- Application Form Box -->
+      <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+        
+        <!-- Form Header Ribbon -->
+        <div class="bg-gradient-to-r from-blue-900 via-cscBlue to-blue-800 px-6 py-4 text-white flex flex-wrap justify-between items-center gap-2">
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-file-circle-check text-yellow-400 text-xl"></i>
+            <span class="font-bold text-sm sm:text-base">ग्राहक आवेदन एवं दस्तावेज फॉर्म</span>
+          </div>
+          <span class="text-xs bg-blue-950/80 px-2.5 py-1 rounded-full border border-blue-400/40 text-blue-200">
+            दुकानदार: <strong>चितरंजन वर्मा</strong> | रानीगंज
+          </span>
+        </div>
+
+        <form id="onlineApplicationForm" onsubmit="handleFormSubmission(event)" class="p-6 sm:p-8 space-y-6">
+          
+          <!-- Alert box for errors or notices -->
+          <div id="formAlertBox" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+
+          <!-- Section 1: Customer Personal Details -->
+          <div>
+            <h4 class="text-sm font-bold text-slate-800 uppercase tracking-wider flex items-center gap-2 mb-4 pb-2 border-b border-slate-200">
+              <span class="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs">1</span>
+              ग्राहक का विवरण (Customer Details)
+            </h4>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Name -->
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">
+                  पूरा नाम (Full Name) <span class="text-red-500">*</span>
+                </label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-user text-sm"></i>
+                  </div>
+                  <input type="text" id="custName" required placeholder="जैसे: राहुल कुमार"
+                    class="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 text-sm outline-none transition-all">
+                </div>
+              </div>
+
+              <!-- Mobile -->
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">
+                  मोबाइल नंबर (Mobile No.) <span class="text-red-500">*</span>
+                </label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-phone text-sm"></i>
+                  </div>
+                  <input type="tel" id="custPhone" required maxlength="10" pattern="[0-9]{10}" placeholder="10 अंकों का मोबाइल नंबर"
+                    class="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 text-sm outline-none transition-all">
+                </div>
+              </div>
+
+              <!-- Father / Guardian Name -->
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">
+                  पिता / पति का नाम (Father / Husband's Name)
+                </label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-person text-sm"></i>
+                  </div>
+                  <input type="text" id="custFather" placeholder="अभिभावक का नाम"
+                    class="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 text-sm outline-none transition-all">
+                </div>
+              </div>
+
+              <!-- Aadhaar Number (Optional / Last 4 digits) -->
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">
+                  आधार संख्या (Aadhaar Number)
+                </label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-id-card text-sm"></i>
+                  </div>
+                  <input type="text" id="custAadhaar" maxlength="12" placeholder="12 अंकों का आधार नंबर"
+                    class="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 text-sm outline-none transition-all">
+                </div>
+              </div>
+
+              <!-- Full Address -->
+              <div class="sm:col-span-2">
+                <label class="block text-xs font-semibold text-slate-700 mb-1">
+                  पूरा पता (Village, Post, Thana, District, PIN) <span class="text-red-500">*</span>
+                </label>
+                <div class="relative">
+                  <div class="absolute top-3 left-3 text-slate-400">
+                    <i class="fa-solid fa-map-pin text-sm"></i>
+                  </div>
+                  <input type="text" id="custAddress" required placeholder="जैसे: ग्राम - रानीगंज, पोस्ट - रानीगंज, जिला - गया, बिहार 824210"
+                    class="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 text-sm outline-none transition-all">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Service Selection -->
+          <div>
+            <h4 class="text-sm font-bold text-slate-800 uppercase tracking-wider flex items-center gap-2 mb-4 pb-2 border-b border-slate-200">
+              <span class="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs">2</span>
+              सेवा का चयन (Select Required Service)
+            </h4>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Service Category -->
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">
+                  मुख्य सेवा चुनें (Main Service) <span class="text-red-500">*</span>
+                </label>
+                <select id="serviceSelect" onchange="updateServiceInfo()" required
+                  class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 text-sm outline-none bg-white font-medium">
+                  <option value="">-- सेवा का चुनाव करें --</option>
+                  <optgroup label="PAN & Identity">
+                    <option value="नया पैन कार्ड (New PAN Card)">नया पैन कार्ड (New PAN Card)</option>
+                    <option value="पैन कार्ड सुधार / रिप्रिंट (PAN Card Correction)">पैन कार्ड सुधार / रिप्रिंट</option>
+                    <option value="नया वोटर कार्ड (New Voter ID)">नया वोटर कार्ड (New Voter ID)</option>
+                    <option value="वोटर कार्ड सुधार (Voter ID Correction)">वोटर कार्ड सुधार</option>
+                  </optgroup>
+                  <optgroup label="Driving Licence">
+                    <option value="लर्नर लाइसेंस (Learner Licence - LL)">लर्नर लाइसेंस (Learner Licence - LL)</option>
+                    <option value="स्थायी ड्राइविंग लाइसेंस (Permanent DL)">स्थायी ड्राइविंग लाइसेंस (Permanent DL)</option>
+                    <option value="डुप्लीकेट / पता सुधार DL">डुप्लीकेट / पता सुधार DL</option>
+                  </optgroup>
+                  <optgroup label="Sarkari Exam & Jobs">
+                    <option value="सरकारी नौकरी ऑनलाइन फॉर्म (Govt Job Application)">सरकारी नौकरी ऑनलाइन फॉर्म</option>
+                    <option value="एडमिट कार्ड डाउनलोड / प्रिंट (Admit Card)">एडमिट कार्ड डाउनलोड / प्रिंट</option>
+                    <option value="रिजल्ट व आंसर की चेक (Result Check)">रिजल्ट व आंसर की चेक</option>
+                  </optgroup>
+                  <optgroup label="Bihar Govt & CSC Certificates">
+                    <option value="जाति प्रमाण पत्र (Caste Certificate)">जाति प्रमाण पत्र (Caste Certificate)</option>
+                    <option value="आय प्रमाण पत्र (Income Certificate)">आय प्रमाण पत्र (Income Certificate)</option>
+                    <option value="निवास प्रमाण पत्र (Residential / Niwas)">निवास प्रमाण पत्र (Residential / Niwas)</option>
+                    <option value="राशन कार्ड आवेदन / नाम जोड़ना">राशन कार्ड आवेदन / नाम जोड़ना</option>
+                    <option value="वृद्धा / विधवा / दिव्यांग पेंशन आवेदन">वृद्धा / विधवा / दिव्यांग पेंशन आवेदन</option>
+                    <option value="जमीन रसीद / दाखिल खारिज / LPC">जमीन रसीद / दाखिल खारिज / LPC</option>
+                    <option value="आयुष्मान भारत गोल्डन कार्ड">आयुष्मान भारत गोल्डन कार्ड</option>
+                  </optgroup>
+                  <optgroup label="Ticket & Utilities">
+                    <option value="रेलवे IRCTC तत्काल / जनरल टिकट">रेलवे IRCTC तत्काल / जनरल टिकट</option>
+                    <option value="बिजली बिल भुगतान / DTH रिचार्ज">बिजली बिल भुगतान / DTH रिचार्ज</option>
+                    <option value="अन्य कोई कार्य (Other Work)">अन्य कोई कार्य (Other Work)</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <!-- Urgency / Delivery Mode -->
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">
+                  कार्य की प्राथमिकता (Priority)
+                </label>
+                <select id="urgencySelect" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 text-sm outline-none bg-white">
+                  <option value="Normal">सामान्य (1 से 3 कार्य दिवस)</option>
+                  <option value="Urgent">तत्काल / अर्जेन्ट (आज ही प्रक्रिया करें)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Dynamic Service Guidance Note -->
+            <div id="serviceGuidanceBox" class="mt-3 p-3 bg-blue-50 border border-blue-200 rounded-xl text-xs text-blue-900 flex items-start gap-2">
+              <i class="fa-solid fa-circle-info text-blue-600 mt-0.5"></i>
+              <span id="serviceGuidanceText">कृपया वह सेवा चुनें जिसे आप कराना चाहते हैं। जरूरी दस्तावेजों की सूची यहाँ दिखाई देगी।</span>
+            </div>
+          </div>
+
+          <!-- Section 3: Document Uploads -->
+          <div>
+            <h4 class="text-sm font-bold text-slate-800 uppercase tracking-wider flex items-center justify-between mb-4 pb-2 border-b border-slate-200">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs">3</span>
+                <span>दस्तावेज अपलोड करें (Upload Documents)</span>
+              </div>
+              <span class="text-xs font-normal text-slate-500">Max size: 5MB per file</span>
+            </h4>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              
+              <!-- File 1: Passport Photo -->
+              <div class="border-2 border-dashed border-slate-300 rounded-2xl p-4 text-center hover:border-blue-500 transition-colors bg-slate-50 relative group">
+                <div class="w-10 h-10 mx-auto rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-2">
+                  <i class="fa-solid fa-camera"></i>
+                </div>
+                <label for="docPhoto" class="cursor-pointer block">
+                  <span class="block text-xs font-bold text-slate-700">पासपोर्ट साइज फोटो</span>
+                  <span class="block text-[11px] text-slate-500 mt-0.5" id="photoLabel">फोटो चुनें (JPG/PNG)</span>
+                </label>
+                <input type="file" id="docPhoto" accept="image/*" class="hidden" onchange="previewFile(this, 'photoPreview', 'photoLabel')">
+                <div id="photoPreview" class="mt-2 hidden">
+                  <img src="" alt="Photo" class="h-16 w-16 mx-auto object-cover rounded-lg border shadow-sm">
+                </div>
+              </div>
+
+              <!-- File 2: Signature -->
+              <div class="border-2 border-dashed border-slate-300 rounded-2xl p-4 text-center hover:border-blue-500 transition-colors bg-slate-50 relative group">
+                <div class="w-10 h-10 mx-auto rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-2">
+                  <i class="fa-solid fa-signature"></i>
+                </div>
+                <label for="docSign" class="cursor-pointer block">
+                  <span class="block text-xs font-bold text-slate-700">हस्ताक्षर (Signature)</span>
+                  <span class="block text-[11px] text-slate-500 mt-0.5" id="signLabel">कागज पर साइन कर फोटो लें</span>
+                </label>
+                <input type="file" id="docSign" accept="image/*" class="hidden" onchange="previewFile(this, 'signPreview', 'signLabel')">
+                <div id="signPreview" class="mt-2 hidden">
+                  <img src="" alt="Sign" class="h-12 w-24 mx-auto object-contain rounded border bg-white shadow-sm">
+                </div>
+              </div>
+
+              <!-- File 3: Aadhaar / Main ID Document -->
+              <div class="border-2 border-dashed border-slate-300 rounded-2xl p-4 text-center hover:border-blue-500 transition-colors bg-slate-50 relative group">
+                <div class="w-10 h-10 mx-auto rounded-full bg-amber-100 text-amber-600 flex items-center justify-center mb-2">
+                  <i class="fa-solid fa-file-pdf"></i>
+                </div>
+                <label for="docMain" class="cursor-pointer block">
+                  <span class="block text-xs font-bold text-slate-700">आधार / जरूरी दस्तावेज</span>
+                  <span class="block text-[11px] text-slate-500 mt-0.5" id="mainDocLabel">Aadhaar / मार्कशीट (PDF/Img)</span>
+                </label>
+                <input type="file" id="docMain" accept="image/*,application/pdf" class="hidden" onchange="handleMainDoc(this)">
+                <div id="mainDocPreview" class="mt-2 hidden text-xs font-bold text-green-700 flex items-center justify-center gap-1">
+                  <i class="fa-solid fa-check"></i> <span id="mainDocName">फाइल सेलेक्ट हो गई</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Notes & Remarks Textarea -->
+            <div class="mt-4">
+              <label class="block text-xs font-semibold text-slate-700 mb-1">
+                कोई विशेष विवरण या निर्देश (Additional Notes / Message)
+              </label>
+              <textarea id="custRemarks" rows="2" placeholder="जैसे: फॉर्म का पोस्ट नाम, या किस सदस्य का नाम जोड़ना है, कोई खास तारीख..."
+                class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 text-xs sm:text-sm outline-none transition-all"></textarea>
+            </div>
+          </div>
+
+          <!-- Section 4: Declaration & Submission Button -->
+          <div class="pt-2">
+            <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs text-amber-900 mb-4 flex items-start gap-2">
+              <i class="fa-solid fa-shield-halved text-amber-600 mt-0.5"></i>
+              <span>
+                <strong>सुरक्षा वचन:</strong> आपके द्वारा अपलोड किए गए दस्तावेज केवल फॉर्म भरने हेतु वर्मा कंप्यूटर के सुरक्षित सिस्टम पर उपयोग होंगे।
+              </span>
+            </div>
+
+            <button type="submit" id="submitFormBtn"
+              class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-orange-600 via-orange-500 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-extrabold text-base sm:text-lg shadow-lg shadow-orange-600/30 transition-all transform active:scale-98 flex items-center justify-center gap-3">
+              <i class="fa-solid fa-paper-plane text-xl"></i>
+              <span>दस्तावेज ऑनलाइन सबमिट करें (Submit Application)</span>
+            </button>
+            <p class="text-center text-xs text-slate-500 mt-2">सबमिट होते ही आपको WhatsApp पर डायरेक्ट भेजने का विकल्प मिलेगा</p>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SUCCESS & RECEIPT MODAL (TRIGGERED AFTER SUBMISSION) -->
+  <div id="receiptModal" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 transform transition-all p-6 sm:p-8 relative">
+      
+      <!-- Close Button -->
+      <button onclick="closeReceiptModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center no-print">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Printable Receipt Wrapper -->
+      <div id="printReceiptModal">
+        <!-- Receipt Header -->
+        <div class="text-center pb-4 border-b border-slate-200">
+          <span class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold mb-2">
+            <i class="fa-solid fa-circle-check mr-1"></i> आवेदन सफलतापूर्वक दर्ज हुआ!
+          </span>
+          <h3 class="text-xl font-black text-slate-900">VERMA COMPUTER & CSC CENTER</h3>
+          <p class="text-xs text-slate-500">रानीगंज, गया, बिहार - 824210 | मो०: 6201408435</p>
+          <div class="mt-3 bg-slate-100 py-2 px-4 rounded-xl border border-slate-200 inline-block">
+            <p class="text-[11px] text-slate-500 font-bold uppercase tracking-wider">टोकन ट्रैकिंग नंबर (Token ID)</p>
+            <p id="receiptTokenId" class="text-xl font-mono font-extrabold text-blue-700 tracking-wider">VC-XXXXX</p>
+          </div>
+        </div>
+
+        <!-- Receipt Table / Details -->
+        <div class="py-4 space-y-2.5 text-xs sm:text-sm">
+          <div class="flex justify-between py-1 border-b border-slate-100">
+            <span class="text-slate-500">ग्राहक का नाम:</span>
+            <span id="receiptCustName" class="font-bold text-slate-800"></span>
+          </div>
+          <div class="flex justify-between py-1 border-b border-slate-100">
+            <span class="text-slate-500">मोबाइल नंबर:</span>
+            <span id="receiptCustPhone" class="font-bold text-slate-800"></span>
+          </div>
+          <div class="flex justify-between py-1 border-b border-slate-100">
+            <span class="text-slate-500">चुनी गई सेवा:</span>
+            <span id="receiptService" class="font-bold text-cscBlue"></span>
+          </div>
+          <div class="flex justify-between py-1 border-b border-slate-100">
+            <span class="text-slate-500">आवेदन की तिथि व समय:</span>
+            <span id="receiptDateTime" class="font-medium text-slate-700"></span>
+          </div>
+          <div class="flex justify-between py-1 border-b border-slate-100">
+            <span class="text-slate-500">अपलोड किए गए दस्तावेज:</span>
+            <span id="receiptDocsCount" class="font-semibold text-green-700">3 फाइल्स संलग्न</span>
+          </div>
+          <div class="flex justify-between py-1 border-b border-slate-100">
+            <span class="text-slate-500">वर्तमान स्थिति:</span>
+            <span class="font-bold text-yellow-600 bg-yellow-50 px-2 py-0.5 rounded border border-yellow-200">
+              प्रक्रियाधीन (Under Review)
+            </span>
+          </div>
+        </div>
+
+        <!-- Shop Owner Note -->
+        <div class="bg-blue-50 p-3 rounded-xl border border-blue-200 text-xs text-blue-900 mt-2">
+          <p class="font-semibold">आवश्यक निर्देश:</p>
+          <p class="text-[11px] text-blue-800 mt-0.5">
+            नीचे दिए गए हरे बटन पर क्लिक करके अपने दस्तावेज और टोकन नंबर <strong>चितरंजन वर्मा जी के WhatsApp (6201408435)</strong> पर अभी भेज दें ताकि आपका काम तुरंत शुरू हो सके।
+          </p>
+        </div>
+      </div>
+
+      <!-- Action Buttons (No Print) -->
+      <div class="mt-6 space-y-3 no-print">
+        <!-- 1-Click WhatsApp Button -->
+        <button id="sendWhatsappBtn"
+          class="w-full py-3.5 px-4 rounded-xl bg-green-600 hover:bg-green-700 text-white font-bold text-sm shadow-md shadow-green-600/30 flex items-center justify-center gap-2 transition-transform transform active:scale-95">
+          <i class="fa-brands fa-whatsapp text-xl"></i>
+          <span>WhatsApp पर दस्तावेज भेजें (Click to Send)</span>
+        </button>
+
+        <div class="grid grid-cols-2 gap-3">
+          <button onclick="window.print()" class="py-2.5 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs flex items-center justify-center gap-2">
+            <i class="fa-solid fa-print"></i>
+            <span>रसीद प्रिंट करें</span>
+          </button>
+          <button onclick="closeReceiptModal()" class="py-2.5 px-3 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold text-xs flex items-center justify-center">
+            <span>बंद करें (Close)</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- REAL-TIME STATUS TRACKER SECTION -->
+  <section id="trackSection" class="py-14 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-8">
+        <span class="text-blue-700 font-bold uppercase tracking-wider text-xs bg-blue-100 px-3 py-1 rounded-full border border-blue-200">
+          <i class="fa-solid fa-magnifying-glass mr-1"></i> लाइव ट्रैकिंग
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+          अपने फॉर्म / दस्तावेज का स्टेटस जांचें
+        </h2>
+        <p class="text-slate-600 text-sm mt-1">
+          अपना टोकन नंबर (जैसे: <strong>VC-94812</strong>) या रजिस्टर्ड मोबाइल नंबर दर्ज करें
+        </p>
+      </div>
+
+      <!-- Search Input Card -->
+      <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-md border border-slate-200">
+        <div class="flex flex-col sm:flex-row gap-3">
+          <div class="relative flex-1">
+            <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+              <i class="fa-solid fa-hashtag text-base"></i>
+            </div>
+            <input type="text" id="trackInput" placeholder="टोकन आईडी या मोबाइल नंबर दर्ज करें..."
+              class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 text-sm outline-none font-medium uppercase">
+          </div>
+          <button onclick="trackApplication()" class="px-6 py-3 bg-blue-700 hover:bg-blue-800 text-white font-bold text-sm rounded-xl transition-all flex items-center justify-center gap-2 shadow-md shadow-blue-700/20">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>स्टेटस खोजें</span>
+          </button>
+        </div>
+
+        <!-- Result Box -->
+        <div id="trackResultBox" class="mt-6 hidden">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Quick Recent Applications (If found in LocalStorage) -->
+      <div id="recentAppsContainer" class="mt-6 hidden">
+        <h5 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">हाल के आवेदन (Recent Submissions on this Device):</h5>
+        <div id="recentAppsList" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT & CSC CREDENTIALS SECTION -->
+  <section class="py-14 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <!-- Left Image / Visual -->
+        <div class="relative">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-800 text-white p-8 relative">
+            <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-blue-500/20 rounded-full blur-3xl"></div>
+            
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-600 flex items-center justify-center text-white text-2xl shadow-lg">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-extrabold">VERMA COMPUTER</h3>
+                <p class="text-xs text-amber-300 font-semibold">अधिकृत कॉमन सर्विस सेंटर (CSC)</p>
+              </div>
+            </div>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              रानीगंज (गया) में वर्षों से छात्र-छात्राओं, किसानों और आम नागरिकों को भरोसेमंद, पारदर्शी और त्वरित सरकारी व डिजिटल सेवाएं प्रदान करने वाला प्रमुख केंद्र।
+            </p>
+
+            <div class="space-y-3 border-t border-slate-700/80 pt-4 text-xs sm:text-sm">
+              <div class="flex items-center justify-between text-slate-300">
+                <span>संचालक:</span>
+                <span class="font-bold text-white">चितरंजन वर्मा (Chitranjan Verma)</span>
+              </div>
+              <div class="flex items-center justify-between text-slate-300">
+                <span>स्थान:</span>
+                <span class="font-bold text-white">रानीगंज, गया, बिहार (824210)</span>
+              </div>
+              <div class="flex items-center justify-between text-slate-300">
+                <span>सपोर्ट संपर्क:</span>
+                <span class="font-bold text-emerald-400">+91 6201408435</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content & Benefits -->
+        <div class="space-y-6">
+          <span class="text-orange-600 font-bold uppercase tracking-wider text-xs bg-orange-100 px-3 py-1 rounded-full border border-orange-200">
+            वर्मा कंप्यूटर ही क्यों चुनें?
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
+            समय की बचत, सही मार्गदर्शन और 100% सही फॉर्म भरने की गारंटी
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            सरकारी परीक्षाओं में फॉर्म रिजेक्ट होने का सबसे बड़ा कारण गलत फोटो साइज, गलत साइन या विवरण में त्रुटि होती है। वर्मा कंप्यूटर पर सभी नियमों का पालन करते हुए सावधानीपूर्वक आवेदन किया जाता है।
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="w-8 h-8 rounded-lg bg-green-100 text-green-700 flex items-center justify-center mb-2 font-bold">
+                <i class="fa-solid fa-shield-cat"></i>
+              </div>
+              <h4 class="font-bold text-sm text-slate-800">त्रुटिरहित फॉर्म सबमिशन</h4>
+              <p class="text-xs text-slate-500 mt-1">फाइनल सबमिट करने से पहले आपको प्रीव्यू चेक कराया जाता है।</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center mb-2 font-bold">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+              <h4 class="font-bold text-sm text-slate-800">व्हाट्सएप सहायता</h4>
+              <p class="text-xs text-slate-500 mt-1">घर बैठे व्हाट्सएप पर डॉक्यूमेंट भेजें और फॉर्म भरवाएं।</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="w-8 h-8 rounded-lg bg-yellow-100 text-yellow-700 flex items-center justify-center mb-2 font-bold">
+                <i class="fa-solid fa-file-invoice"></i>
+              </div>
+              <h4 class="font-bold text-sm text-slate-800">उचित सरकारी शुल्क</h4>
+              <p class="text-xs text-slate-500 mt-1">बिना किसी छुपाए चार्ज के स्पष्ट और पारदर्शी सरकारी फीस।</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center mb-2 font-bold">
+                <i class="fa-solid fa-truck-fast"></i>
+              </div>
+              <h4 class="font-bold text-sm text-slate-800">फास्ट सर्विस डिलीवरी</h4>
+              <p class="text-xs text-slate-500 mt-1">तत्काल रसीद और समय पर सर्टिफिकेट व प्रिंट आउट।</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & LOCATION FOOTER SECTION -->
+  <footer id="contact" class="bg-slate-900 text-white pt-12 pb-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-slate-800">
+        
+        <!-- Col 1: Shop Brand -->
+        <div class="space-y-4">
+          <div class="flex items-center space-x-2">
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-blue-600 to-cyan-500 text-white flex items-center justify-center font-black text-xl">
+              VC
+            </div>
+            <span class="text-xl font-black text-white">VERMA COMPUTER</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            आपकी सुविधा, हमारा प्रयास। रानीगंज (गया) में सभी ऑनलाइन फॉर्म, CSC सेवाएं, पैन कार्ड, वोटर कार्ड और प्रिंटिंग के लिए विश्वसनीय केंद्र।
+          </p>
+          <div class="text-xs text-slate-300">
+            <span class="text-amber-400 font-semibold">प्रोप्राइटर:</span> चितरंजन वर्मा
+          </div>
+        </div>
+
+        <!-- Col 2: Services Quick Links -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-4 border-l-2 border-orange-500 pl-2">
+            प्रमुख सेवाएं
+          </h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#services" class="hover:text-white transition-colors">&rarr; नया पैन कार्ड व सुधार</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">&rarr; नया वोटर आईडी व नाम सुधार</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">&rarr; ड्राइविंग लाइसेंस (लर्नर व परमानेंट)</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">&rarr; सरकारी नौकरी ऑनलाइन फॉर्म भरना</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">&rarr; जाति, आय, निवास प्रमाण पत्र</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">&rarr; राशन कार्ड व पेंशन योजनाएं</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-4 border-l-2 border-green-500 pl-2">
+            दुकान का संपर्क
+          </h4>
+          <ul class="space-y-3 text-xs text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-location-dot text-red-400 mt-1"></i>
+              <span>रानीगंज, गया, बिहार - 824210 (Raniganj, Gaya, Bihar)</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-phone text-green-400"></i>
+              <a href="tel:6201408435" class="hover:text-white font-semibold">6201408435</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-envelope text-blue-400"></i>
+              <a href="mailto:computerverma36@gmail.com" class="hover:text-white">computerverma36@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-clock text-yellow-400"></i>
+              <span>सोमवार - रविवार: सुबह 8:00 से रात 8:30</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Quick Action -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-4 border-l-2 border-blue-500 pl-2">
+            डायरेक्ट कनेक्ट
+          </h4>
+          <p class="text-xs text-slate-400 mb-4">
+            डॉक्यूमेंट तुरंत व्हाट्सएप पर भेजने के लिए नीचे बटन पर क्लिक करें:
+          </p>
+          <a href="https://wa.me/916201408435?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20%E0%A4%9A%E0%A4%BF%E0%A4%A4%E0%A4%B0%E0%A4%82%E0%A4%9C%E0%A4%A8%20%E0%A4%AD%E0%A4%BE%E0%A4%88%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%91%E0%A4%A8%E0%A4%B2%E0%A4%BE%E0%A4%87%E0%A4%A8%20%E0%A4%95%E0%A4%BE%E0%A4%AE%20%E0%A4%95%E0%A4%B0%E0%A4%B5%E0%A4%BE%E0%A4%A8%E0%A4%BE%20%E0%A4%B9%E0%A5%88%E0%A5%A4" 
+             target="_blank"
+             class="w-full py-2.5 px-3 rounded-xl bg-green-600 hover:bg-green-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-green-600/30 transition-all">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>WhatsApp चैट शुरू करें</span>
+          </a>
+          <a href="#applySection" class="w-full mt-2 py-2.5 px-3 rounded-xl bg-blue-700 hover:bg-blue-600 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+            <i class="fa-solid fa-file-arrow-up"></i>
+            <span>पोर्टल पर दस्तावेज अपलोड करें</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Copyright Note -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+        <p>© 2026 VERMA COMPUTER & CSC CENTER - रानीगंज, गया (बिहार). All Rights Reserved.</p>
+        <p>संचालक: <strong class="text-slate-400">चितरंजन वर्मा</strong> | 6201408435</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING CALL & WHATSAPP ACTION BUTTONS FOR MOBILE -->
+  <div class="fixed bottom-5 right-4 z-40 flex flex-col gap-3">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/916201408435?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20Verma%20Computer%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%91%E0%A4%A8%E0%A4%B2%E0%A4%BE%E0%A4%87%E0%A4%A8%20%E0%A4%A6%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%B5%E0%A5%87%E0%A4%9C%E0%A4%BC%20%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%82%E0%A4%A7%E0%A5%80%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%8F%E0%A5%A4" 
+       target="_blank"
+       title="WhatsApp पर बात करें"
+       class="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white flex items-center justify-center text-2xl shadow-xl shadow-green-500/40 hover:scale-110 transition-transform">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
+    <!-- Direct Call Floating Button -->
+    <a href="tel:6201408435"
+       title="कॉल करें" 
+       class="w-12 h-12 rounded-full bg-blue-700 hover:bg-blue-800 text-white flex items-center justify-center text-xl shadow-lg shadow-blue-700/40 hover:scale-110 transition-transform self-end">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+  </div>
+
+  <!-- JAVASCRIPT APPLICATION LOGIC -->
+  <script>
+    // Constants for Chitranjan Verma's CSC Center
+    const SHOP_CONFIG = {
+      owner: "Chitranjan Verma",
+      phone: "6201408435",
+      whatsappNumber: "916201408435",
+      email: "computerverma36@gmail.com",
+      address: "Raniganj, Gaya, Bihar - 824210",
+      storageKey: "verma_computer_applications"
+    };
+
+    // Guidance tips per service
+    const SERVICE_TIPS = {
+      "नया पैन कार्ड (New PAN Card)": "दस्तावेज चाहिए: आधार कार्ड, 2 पासपोर्ट साइज फोटो और हस्ताक्षर।",
+      "पैन कार्ड सुधार / रिप्रिंट (PAN Card Correction)": "दस्तावेज चाहिए: पुराना पैन कार्ड कॉपी, आधार कार्ड, सही विवरण प्रूफ।",
+      "नया वोटर कार्ड (New Voter ID)": "दस्तावेज चाहिए: आधार कार्ड, 1 पासपोर्ट फोटो, उम्र 18+ का प्रमाण।",
+      "वोटर कार्ड सुधार (Voter ID Correction)": "दस्तावेज चाहिए: मौजूदा वोटर कार्ड नंबर, सुधार हेतु सही प्रमाण पत्र।",
+      "लर्नर लाइसेंस (Learner Licence - LL)": "दस्तावेज चाहिए: आधार कार्ड (मोबाइल लिंक), 10वीं मार्कशीट/जन्म प्रमाण पत्र, ब्लड ग्रुप, फोटो व साइन।",
+      "सरकारी नौकरी ऑनलाइन फॉर्म (Govt Job Application)": "दस्तावेज चाहिए: फोटो, साइन, 10वीं/12वीं/ग्रेजुएशन मार्कशीट, जाति/EWS प्रमाण पत्र।",
+      "जाति प्रमाण पत्र (Caste Certificate)": "दस्तावेज चाहिए: आधार कार्ड, फोटो, खतियान या पिता का जाति प्रमाण पत्र (यदि उपलब्ध हो)।",
+      "आय प्रमाण पत्र (Income Certificate)": "दस्तावेज चाहिए: आधार कार्ड, फोटो, परिवार की वार्षिक आय का विवरण।",
+      "निवास प्रमाण पत्र (Residential / Niwas)": "दस्तावेज चाहिए: आधार कार्ड, फोटो, रानीगंज/गया का स्थायी पता प्रमाण।"
+    };
+
+    // Auto update guidance note when service is changed
+    function updateServiceInfo() {
+      const select = document.getElementById('serviceSelect');
+      const val = select.value;
+      const textSpan = document.getElementById('serviceGuidanceText');
+      if (SERVICE_TIPS[val]) {
+        textSpan.innerHTML = `<strong>जरूरी कागजात:</strong> ${SERVICE_TIPS[val]}`;
+      } else if (val) {
+        textSpan.innerHTML = `आपने <strong>${val}</strong> चुना है। कृपया आधार कार्ड और संबंधित कागजात नीचे अपलोड करें।`;
+      } else {
+        textSpan.innerHTML = "कृपया वह सेवा चुनें जिसे आप कराना चाहते हैं। जरूरी दस्तावेजों की सूची यहाँ दिखाई देगी।";
+      }
+    }
+
+    // Scroll directly to apply form and select service
+    function selectServiceForApply(serviceName) {
+      const section = document.getElementById('applySection');
+      section.scrollIntoView({ behavior: 'smooth' });
+
+      const select = document.getElementById('serviceSelect');
+      // Match or set value
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].value.includes(serviceName) || serviceName.includes(select.options[i].value)) {
+          select.selectedIndex = i;
+          updateServiceInfo();
+          return;
+        }
+      }
+      // If exact string not in options, set custom
+      updateServiceInfo();
+    }
+
+    function scrollToApply(type) {
+      document.getElementById('applySection').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Image file preview helper
+    function previewFile(input, previewDivId, labelId) {
+      const file = input.files[0];
+      const previewDiv = document.getElementById(previewDivId);
+      const label = document.getElementById(labelId);
+
+      if (file) {
+        if (file.size > 5 * 1024 * 1024) {
+          showFormAlert("फाइल 5MB से छोटी होनी चाहिए!", "error");
+          input.value = "";
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          previewDiv.querySelector('img').src = e.target.result;
+          previewDiv.classList.remove('hidden');
+          label.textContent = file.name.substring(0, 16) + '...';
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    // Main Doc File handler
+    function handleMainDoc(input) {
+      const file = input.files[0];
+      const preview = document.getElementById('mainDocPreview');
+      const nameSpan = document.getElementById('mainDocName');
+      const label = document.getElementById('mainDocLabel');
+
+      if (file) {
+        if (file.size > 5 * 1024 * 1024) {
+          showFormAlert("दस्तावेज फाइल 5MB से छोटी होनी चाहिए!", "error");
+          input.value = "";
+          return;
+        }
+        preview.classList.remove('hidden');
+        nameSpan.textContent = file.name;
+        label.textContent = "फाइल चुनी गई ✓";
+      }
+    }
+
+    // Form Alert helper
+    function showFormAlert(message, type = "error") {
+      const box = document.getElementById('formAlertBox');
+      box.classList.remove('hidden', 'bg-red-100', 'text-red-800', 'border-red-300', 'bg-green-100', 'text-green-800', 'border-green-300');
+      
+      if (type === "error") {
+        box.classList.add('bg-red-100', 'text-red-800', 'border', 'border-red-300');
+        box.innerHTML = `<i class="fa-solid fa-triangle-exclamation mr-1.5"></i> ${message}`;
+      } else {
+        box.classList.add('bg-green-100', 'text-green-800', 'border', 'border-green-300');
+        box.innerHTML = `<i class="fa-solid fa-circle-check mr-1.5"></i> ${message}`;
+      }
+      box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // Handle Form Submission
+    let currentSubmittedApp = null;
+
+    function handleFormSubmission(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const father = document.getElementById('custFather').value.trim() || 'N/A';
+      const aadhaar = document.getElementById('custAadhaar').value.trim() || 'N/A';
+      const address = document.getElementById('custAddress').value.trim();
+      const service = document.getElementById('serviceSelect').value;
+      const urgency = document.getElementById('urgencySelect').value;
+      const remarks = document.getElementById('custRemarks').value.trim() || 'कोई विशेष टिप्पणी नहीं';
+
+      // Validation
+      if (!name || !phone || !address || !service) {
+        showFormAlert("कृपया सभी अनिवार्य (*) फील्ड भरें!", "error");
+        return;
+      }
+
+      if (phone.length !== 10 || isNaN(phone)) {
+        showFormAlert("कृपया वैध 10 अंकों का मोबाइल नंबर दर्ज करें!", "error");
+        return;
+      }
+
+      // Generate Unique Token ID: VC-XXXXX
+      const randomNum = Math.floor(10000 + Math.random() * 90000);
+      const tokenId = `VC-${randomNum}`;
+      const now = new Date();
+      const dateTimeStr = now.toLocaleDateString('hi-IN', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric'
+      }) + " " + now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+
+      // Check uploaded files
+      const hasPhoto = document.getElementById('docPhoto').files.length > 0;
+      const hasSign = document.getElementById('docSign').files.length > 0;
+      const hasMainDoc = document.getElementById('docMain').files.length > 0;
+
+      let docsList = [];
+      if (hasPhoto) docsList.push("फोटो (Photo)");
+      if (hasSign) docsList.push("हस्ताक्षर (Sign)");
+      if (hasMainDoc) docsList.push("आधार/मुख्य दस्तावेज (Main Document)");
+
+      const appData = {
+        tokenId,
+        name,
+        phone,
+        father,
+        aadhaar,
+        address,
+        service,
+        urgency,
+        remarks,
+        date: dateTimeStr,
+        timestamp: Date.now(),
+        docs: docsList.length > 0 ? docsList.join(", ") : "कागजात WhatsApp पर भेजेंगे",
+        status: "प्रक्रियाधीन (Under Review)"
+      };
+
+      // Save to localStorage
+      saveApplication(appData);
+      currentSubmittedApp = appData;
+
+      // Fill Receipt Modal
+      document.getElementById('receiptTokenId').textContent = tokenId;
+      document.getElementById('receiptCustName').textContent = name;
+      document.getElementById('receiptCustPhone').textContent = phone;
+      document.getElementById('receiptService').textContent = service;
+      document.getElementById('receiptDateTime').textContent = dateTimeStr;
+      document.getElementById('receiptDocsCount').textContent = docsList.length > 0 ? `${docsList.length} दस्तावेज चुने गए` : 'WhatsApp पर दस्तावेज प्रेषित किए जाएंगे';
+
+      // Setup WhatsApp Action Button
+      setupWhatsAppButton(appData);
+
+      // Open Modal
+      document.getElementById('receiptModal').classList.remove('hidden');
+
+      // Refresh Recent list
+      renderRecentApps();
+
+      // Reset form
+      document.getElementById('onlineApplicationForm').reset();
+      document.getElementById('photoPreview').classList.add('hidden');
+      document.getElementById('signPreview').classList.add('hidden');
+      document.getElementById('mainDocPreview').classList.add('hidden');
+      document.getElementById('photoLabel').textContent = "फोटो चुनें (JPG/PNG)";
+      document.getElementById('signLabel').textContent = "कागज पर साइन कर फोटो लें";
+      document.getElementById('mainDocLabel').textContent = "Aadhaar / मार्कशीट (PDF/Img)";
+      document.getElementById('formAlertBox').classList.add('hidden');
+    }
+
+    // Setup direct WhatsApp click with formatted payload
+    function setupWhatsAppButton(app) {
+      const btn = document.getElementById('sendWhatsappBtn');
+      
+      const message = `*नमस्ते वर्मा कंप्यूटर (चितरंजन वर्मा जी)*,\n\nमैंने पोर्टल पर ऑनलाइन फॉर्म हेतु विवरण सबमिट किया है:\n\n` +
+        `🆔 *टोकन आईडी:* ${app.tokenId}\n` +
+        `👤 *ग्राहक नाम:* ${app.name}\n` +
+        `📞 *मोबाइल:* ${app.phone}\n` +
+        `📍 *पता:* ${app.address}\n` +
+        `📝 *सेवा:* ${app.service}\n` +
+        `⚡ *प्राथमिकता:* ${app.urgency}\n` +
+        `📎 *दस्तावेज:* ${app.docs}\n` +
+        `💬 *नोट:* ${app.remarks}\n\n` +
+        `कृपया मेरा यह कार्य प्रोसेस करें। मैं अपने संबंधित दस्तावेज/फोटो इस चैट में भी संलग्न कर रहा हूँ। धन्यवाद!`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const waUrl = `https://wa.me/${SHOP_CONFIG.whatsappNumber}?text=${encodedMessage}`;
+
+      btn.onclick = function() {
+        window.open(waUrl, '_blank');
+      };
+    }
+
+    function closeReceiptModal() {
+      document.getElementById('receiptModal').classList.add('hidden');
+    }
+
+    // Local Storage helpers
+    function getStoredApplications() {
+      try {
+        const data = localStorage.getItem(SHOP_CONFIG.storageKey);
+        return data ? JSON.parse(data) : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function saveApplication(newApp) {
+      try {
+        let apps = getStoredApplications();
+        apps.unshift(newApp);
+        // keep max 20
+        if (apps.length > 20) apps = apps.slice(0, 20);
+        localStorage.setItem(SHOP_CONFIG.storageKey, JSON.stringify(apps));
+      } catch (e) {
+        console.error("Storage save failed", e);
+      }
+    }
+
+    // Application Tracking function
+    function trackApplication() {
+      const query = document.getElementById('trackInput').value.trim().toUpperCase();
+      const resultBox = document.getElementById('trackResultBox');
+
+      if (!query) {
+        resultBox.classList.remove('hidden');
+        resultBox.innerHTML = `
+          <div class="p-4 bg-red-50 text-red-700 rounded-xl border border-red-200 text-sm">
+            <i class="fa-solid fa-circle-exclamation mr-1"></i> कृपया अपना टोकन नंबर (जैसे: VC-12345) या 10 अंकों का मोबाइल नंबर दर्ज करें!
+          </div>
+        `;
+        return;
+      }
+
+      const apps = getStoredApplications();
+      // Search matching token or mobile
+      const found = apps.find(a => a.tokenId.toUpperCase() === query || a.phone === query);
+
+      resultBox.classList.remove('hidden');
+
+      if (found) {
+        resultBox.innerHTML = `
+          <div class="p-5 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border border-blue-200 shadow-sm">
+            <div class="flex flex-wrap items-center justify-between pb-3 border-b border-blue-200 gap-2">
+              <div>
+                <span class="text-xs text-blue-600 font-bold uppercase tracking-wider">आवेदन मिल गया (Found)</span>
+                <h4 class="text-lg font-black text-slate-900">${found.tokenId}</h4>
+              </div>
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-bold rounded-full border border-yellow-300 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-yellow-500 animate-pulse"></span>
+                ${found.status}
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 text-xs">
+              <div>
+                <p class="text-slate-500">आवेदक का नाम:</p>
+                <p class="font-bold text-slate-800 text-sm">${found.name}</p>
+              </div>
+              <div>
+                <p class="text-slate-500">मोबाइल नंबर:</p>
+                <p class="font-bold text-slate-800 text-sm">${found.phone}</p>
+              </div>
+              <div>
+                <p class="text-slate-500">सेवा का नाम:</p>
+                <p class="font-bold text-cscBlue text-sm">${found.service}</p>
+              </div>
+              <div>
+                <p class="text-slate-500">जमा करने का समय:</p>
+                <p class="font-semibold text-slate-700">${found.date}</p>
+              </div>
+              <div class="sm:col-span-2">
+                <p class="text-slate-500">दुकान का पता:</p>
+                <p class="font-medium text-slate-700">रानीगंज, गया, बिहार - 824210 (वर्मा कंप्यूटर)</p>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-blue-200 flex flex-wrap gap-2">
+              <a href="https://wa.me/${SHOP_CONFIG.whatsappNumber}?text=${encodeURIComponent('नमस्ते चितरंजन जी, मेरे टोकन ' + found.tokenId + ' (' + found.name + ') का वर्तमान स्टेटस क्या है?')}"
+                 target="_blank"
+                 class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-bold text-xs flex items-center gap-1.5 shadow-sm">
+                <i class="fa-brands fa-whatsapp"></i>
+                WhatsApp पर अपडेट लें
+              </a>
+              <button onclick="reopenReceipt('${found.tokenId}')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg font-semibold text-xs flex items-center gap-1.5">
+                <i class="fa-solid fa-receipt"></i>
+                रसीद देखें
+              </button>
+            </div>
+          </div>
+        `;
+      } else {
+        // Fallback demo result for testing if not yet in this browser
+        resultBox.innerHTML = `
+          <div class="p-5 bg-amber-50 rounded-2xl border border-amber-200 text-amber-900 text-xs sm:text-sm">
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-triangle-exclamation text-xl text-amber-600 mt-0.5"></i>
+              <div>
+                <p class="font-bold text-sm">इस डिवाइस पर यह टोकन/नंबर सीधे नहीं मिला।</p>
+                <p class="mt-1 text-slate-600 text-xs">
+                  यदि आपने हाल ही में दुकान पर आकर या दूसरे फोन से अप्लाई किया है, तो कृपया सीधे <strong>चितरंजन वर्मा (6201408435)</strong> से WhatsApp या कॉल पर संपर्क करें।
+                </p>
+                <div class="mt-3 flex gap-2">
+                  <a href="tel:6201408435" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-700 text-white font-bold rounded-lg text-xs">
+                    <i class="fa-solid fa-phone"></i> अभी कॉल करें
+                  </a>
+                  <a href="https://wa.me/${SHOP_CONFIG.whatsappNumber}?text=${encodeURIComponent('नमस्ते, मुझे टोकन ' + query + ' का स्टेटस जानना है।')}" 
+                     target="_blank"
+                     class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-600 text-white font-bold rounded-lg text-xs">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp पर पूछें
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    function reopenReceipt(tokenId) {
+      const apps = getStoredApplications();
+      const found = apps.find(a => a.tokenId === tokenId);
+      if (found) {
+        document.getElementById('receiptTokenId').textContent = found.tokenId;
+        document.getElementById('receiptCustName').textContent = found.name;
+        document.getElementById('receiptCustPhone').textContent = found.phone;
+        document.getElementById('receiptService').textContent = found.service;
+        document.getElementById('receiptDateTime').textContent = found.date;
+        document.getElementById('receiptDocsCount').textContent = found.docs;
+        setupWhatsAppButton(found);
+        document.getElementById('receiptModal').classList.remove('hidden');
+      }
+    }
+
+    // Render Recent Applications list
+    function renderRecentApps() {
+      const container = document.getElementById('recentAppsContainer');
+      const list = document.getElementById('recentAppsList');
+      const apps = getStoredApplications();
+
+      if (apps.length === 0) {
+        container.classList.add('hidden');
+        return;
+      }
+
+      container.classList.remove('hidden');
+      list.innerHTML = "";
+
+      apps.slice(0, 4).forEach(app => {
+        const item = document.createElement('div');
+        item.className = "p-3 bg-white border border-slate-200 rounded-xl shadow-xs flex items-center justify-between text-xs cursor-pointer hover:border-blue-400 transition-colors";
+        item.onclick = () => {
+          document.getElementById('trackInput').value = app.tokenId;
+          trackApplication();
+        };
+        item.innerHTML = `
+          <div>
+            <span class="font-bold text-blue-700">${app.tokenId}</span>
+            <p class="text-slate-700 font-medium">${app.name} - <span class="text-slate-500">${app.service.substring(0, 16)}...</span></p>
+          </div>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-yellow-50 text-yellow-700 border border-yellow-200">
+            ${app.status.split(' ')[0]}
+          </span>
+        `;
+        list.appendChild(item);
+      });
+    }
+
+    // Initialize on window load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderRecentApps();
+
+      // Seed a sample if storage completely empty for initial friendly showcase
+      const stored = getStoredApplications();
+      if (stored.length === 0) {
+        const sampleApp = {
+          tokenId: "VC-88214",
+          name: "राजेश कुमार",
+          phone: "6201408435",
+          father: "श्री रमेश प्रसाद",
+          aadhaar: "XXXXXXXX4321",
+          address: "रानीगंज, गया, बिहार 824210",
+          service: "नया पैन कार्ड (New PAN Card)",
+          urgency: "Normal",
+          remarks: "आधार और फोटो जमा है।",
+          date: "06 Nov 2026 10:30 AM",
+          timestamp: Date.now() - 3600000,
+          docs: "फोटो, आधार कार्ड",
+          status: "प्रक्रियाधीन (Under Review)"
+        };
+        saveApplication(sampleApp);
+        renderRecentApps();
+      }
+    });
+  </script>
+</body>
+</html>
